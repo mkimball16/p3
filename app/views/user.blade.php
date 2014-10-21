@@ -1,7 +1,7 @@
 @extends('_master')
 
 @section('title')
-	Add a new book
+	Generate Radom Users
 @stop
 
 @section('content')
