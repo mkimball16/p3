@@ -2,6 +2,7 @@ body {
 	padding:20px;
 	background-color: #333399; 
 	color: #A0A0A0;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 .logo {
@@ -36,7 +37,7 @@ h1, h2, h3 {
 .back {
 	display: block;
 	font-size: large;
-	background-color: #000066;
+	background-color: #713cb3;
 	margin: auto;
 	margin-bottom: 20px;
 	margin-top: 20px;
@@ -63,16 +64,14 @@ h1, h2, h3 {
 
 
 .genie {
-	float: left;
+	float: right;
+	margin-right: 15%;
 }
 
 
-.users {
+.users, .text {
 	text-align: left;
-}
-
-a:link, a:visited, a:active, a:hover {
-	text-decoration:underline;
+	margin-left: 15%;
 }
 
 
@@ -81,7 +80,6 @@ a:link, a:visited, a:active, a:hover {
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	color: #708090;
-	font-size:90%
 }
 
 .container a
@@ -94,6 +92,9 @@ a:link, a:visited, a:active, a:hover {
 {
 	font-family: Verdana, Geneva, sans-serif;
 	text-align: left;
-	font-size: 12px;
-	color: #737373;
+	color: #708090;
+}
+
+a:link, a:visited, a:active, a:hover {
+	text-decoration:underline;
 }

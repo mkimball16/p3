@@ -15,7 +15,8 @@ Click the "Home" button to return to the homepage.</p>
     <button class="back">Home</button>
 	</form>
 	<div class="container">
-		<form method='POST'>	
+	<img class="genie" src='/images/genie.png' alt='genie'>
+		<form class="text" method='POST'>	
 			<label for="paragraphs">Paragraphs</label>
 				@if(isset($result))			
 					<input maxlength="2" name="numParagraphs" type="text" value={{$result['numberOfParagraphs']}} id="paragraphs"> (Maximum: 99)
@@ -30,6 +31,7 @@ Click the "Home" button to return to the homepage.</p>
     	</form>
 
 	</div>
+
 
 	<div class="paragraphs-results"> 
 

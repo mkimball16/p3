@@ -15,6 +15,7 @@ Click the "Home" button to return to the homepage.</p>
 	</form>
 
 <div class="container">
+<img class="genie" src='/images/genie.png' alt='genie'>
 	<form class="users" method='POST'>	
 			<label for="users">How many users?</label>		
 
