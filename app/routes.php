@@ -33,6 +33,7 @@ Route::post('/user', function() {
     $isBdayRequired = false;
     $isProfileRequired = false;
     $isEmailRequired = false;
+    $isPhoneNumberRequired = false;
     foreach($inputs as $key => $value) {
         if ($key == "birthdate")
             $isBdayRequired = true;

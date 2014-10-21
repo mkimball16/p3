@@ -13,7 +13,7 @@
 	</form>
 
 <div class="container">
-	<form method='POST'>	
+	<form class="users" method='POST'>	
 			<label for="users">How many users?</label>		
 
 
@@ -25,7 +25,7 @@
 			@endif	
 
 			<br>
-				Include...
+				Would you like to include any of the following fields?
 			<br>
 			@if(isset($result))	
 				@if($result['isBdayRequired'])
@@ -66,9 +66,10 @@
     	</form>
 
 	</div>
+ 
+ <h3>Random User Results:</h3>
 
-
-	<div class="container"> 
+	<div class="resultscontainer"> 
 
 		@if(isset($result))
 				@for ($i = 1; $i <= $result['numberOfUsers']; $i++)

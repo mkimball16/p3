@@ -28,11 +28,12 @@ nav ul li {
 	 margin: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	text-align: center;
 }
 
-.back, .submit {
+
+.back {
 	display: block;
 	font-size: large;
 	background-color: #000066;
@@ -41,8 +42,17 @@ h1, h2 {
 	margin-top: 20px;
 }
 
+.submit{
+	display: block;
+	font-size: large;
+	background-color: #000066;
+	text-align: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
 .users {
-	text-align: center;
+	float: left;
 }
 
 .tip {
@@ -58,7 +68,7 @@ h1, h2 {
 
 
 .users {
-	text-align: center;
+	text-align: left;
 }
 
 a:link, a:visited, a:active, a:hover {
@@ -66,9 +76,9 @@ a:link, a:visited, a:active, a:hover {
 }
 
 
-.container 
+.resultscontainer 
 {
-	text-align:center;
+	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	color: #708090;
 	font-size:90%
