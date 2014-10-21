@@ -14,7 +14,7 @@
 </head>
 <body>
 
-	<a href='/'><img class='logo' src='/images/aladdin.png' alt='aladdin'></a>
+	<a href='/'><img class='logo' src='/images/genie-lamp.jpg' alt='lamp'></a>
 
 <div class="nav">
 	<nav>

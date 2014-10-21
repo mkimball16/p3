@@ -1,8 +1,6 @@
 body {
 	padding:20px;
-	background-image: url("/images/aladdin-background.jpg"); 
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #333399; 
 	color: #A0A0A0;
 }
 
