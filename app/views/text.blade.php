@@ -7,11 +7,12 @@ Generate Lorem Ipsum Text
 
 @section('content')
 
-<p class="tip">User the field below to specify how many paragraphs of lorem ipsum text to generate. Click the "Go Back" button to return to the homepage.</p>
+<p class="tip">User the field below to specify how many paragraphs of lorem ipsum text to generate. 
+Click the "Home" button to return to the homepage.</p>
 
 
 	<form method="back" action="/">
-    <button class="back">Go Back</button>
+    <button class="back">Home</button>
 	</form>
 	<div class="container">
 		<form method='POST'>	
