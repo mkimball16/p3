@@ -6,35 +6,77 @@
 
 @section('content')
 
-<p class="tip">Add /[number] to the URL to specify how many random users to generate. Click the "Go Back" button to return to the homepage.</p>
+<p class="tip">User the field below to specify how many random users to generate. Click the "Go Back" button to return to the homepage.</p>
 
 	<form method="back" action="/">
     <button class="back">Go Back</button>
 	</form>
 
-	<form class="users" method="GET" action="user.php">
-			<p>Number of users:<br />
-			<select name="numberOfUsers">
-					<option value="1">1</option>
-					<option value="2">2</option>
-			    	<option value="3">3</option>
-					<option value="4">4</option>
-			    	<option value="5">5</option>
-			    	<option value="6">6</option>
-					<option value="7">7</option>
-			    	<option value="8">8</option>
-			    	<option value="9">9</option>
-			    	<option value="10">10</option>
-			    <input type="submit" class="submit" name="submit">	
-			</select></p>
-	</form>		
+<div class="container">
+	<form method='POST'>	
+			<label for="users">How many users?</label>		
 
 
-	<h2> Random user names:</h2>
-	<div class="results">
-		<?php	echo implode('<p>', $names); ?>
+			@if(isset($result))			
+				<input maxlength="2" name="users" type="text" value={{$result['numberOfUsers']}} id="users"> (Maximum: 99)
+			@else
+				<input maxlength="2" name="users" type="text" value="0" id="users"> (Maximum: 99)
+
+			@endif	
+
+			<br>
+				Include...
+			<br>
+			@if(isset($result))	
+				@if($result['isBdayRequired'])
+					<input name="birthdate" type="checkbox" checked="checked">
+				@else
+					<input name="birthdate" type="checkbox">
+				@endif
+				<label for="birthdate">Birthdate</label>		<br>
+				@if($result['isProfileRequired'])
+					<input name="profile" type="checkbox" checked="checked">
+				@else
+					<input name="profile" type="checkbox">
+				@endif
+				<label for="profile">Profile</label>		<br>
+				@if($result['isEmailRequired'])
+					<input name="email" type="checkbox" checked="checked">
+				@else
+					<input name="email" type="checkbox">
+				@endif
+				<label for="email">Email</label>		<br>
+			@else
+				<input name="birthdate" type="checkbox">
+				<label for="birthdate">Birthdate</label>		<br>
+				<input name="profile" type="checkbox">
+				<label for="profile">Profile</label>		<br>
+				<input name="email" type="checkbox">
+				<label for="email">Email</label>		<br>
+			@endif		
+			<input class="submit" type="submit" value="Submit">    
+    	</form>
+
 	</div>
 
-	
+
+	<div class="container"> 
+
+		@if(isset($result))
+				@for ($i = 1; $i <= $result['numberOfUsers']; $i++)
+	     				<br> {{$result['faker']->name}} <br>
+	     				@if($result['isBdayRequired'])
+	     					{{$result['faker']->dateTimeThisCentury->format('m-d-Y')}} <br>
+     					@endif
+     					@if($result['isProfileRequired'])
+	     					{{$result['faker']->text(350)}} <br>  
+     					@endif
+						@if($result['isEmailRequired'])
+	     					{{$result['faker']->email}} <br>  
+     					@endif
+				@endfor
+		@endif
+	</div>
+
 	
  @stop
