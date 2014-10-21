@@ -31,7 +31,7 @@ Click the "Home" button to return to the homepage.</p>
     	</form>
 
 	</div>
-
+<h3>Lorem Ipsum Paragraph Results:</h3>
 
 	<div class="paragraphs-results"> 
 
