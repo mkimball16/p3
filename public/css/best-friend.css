@@ -1,0 +1,68 @@
+body {
+	padding:20px;
+	background-image: url("/images/aladdin-background.jpg"); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFFFFF;
+}
+
+.logo {
+	width:100%;
+	height: 150px;
+	margin-bottom:20px;
+	display:block;
+}
+
+nav ul {
+	list-style-type:none;
+	padding:5px 0px 5px 0px;
+}
+
+nav ul li {
+	display:inline;
+	margin-right:10px;
+}
+
+.nav {
+	 width: 600px;
+	 text-align: center;
+	 border: 2px solid #FFFFFF;
+	 margin: auto;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+.back, .submit {
+	display: block;
+	font-size: large;
+	background-color: #000066;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.tip {
+	display: block;
+	margin: 20px;
+	text-align: center;
+}
+
+
+.genie {
+	float: left;
+}
+
+.results {
+	text-align: center;
+	line-height: 20px;
+}
+
+.users {
+	text-align: center;
+}
+
+a:link, a:visited, a:active, a:hover {
+	text-decoration:underline;
+}
