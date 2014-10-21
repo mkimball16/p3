@@ -46,6 +46,12 @@
 					<input name="email" type="checkbox">
 				@endif
 				<label for="email">Email</label>		<br>
+				@if($result['isPhoneNumberRequired'])
+					<input name="phoneNumber" type="checkbox" checked="checked">
+				@else
+					<input name="phoneNumber" type="checkbox">
+				@endif
+				<label for="phoneNumber">Phone Number</label>		<br>
 			@else
 				<input name="birthdate" type="checkbox">
 				<label for="birthdate">Birthdate</label>		<br>
@@ -53,6 +59,8 @@
 				<label for="profile">Profile</label>		<br>
 				<input name="email" type="checkbox">
 				<label for="email">Email</label>		<br>
+				<input name="phoneNumber" type="checkbox">
+				<label for="phoneNumber">Phone Number</label>		<br>
 			@endif		
 			<input class="submit" type="submit" value="Submit">    
     	</form>
@@ -73,6 +81,9 @@
      					@endif
 						@if($result['isEmailRequired'])
 	     					{{$result['faker']->email}} <br>  
+     					@endif
+     					@if($result['isPhoneNumberRequired'])
+	     					{{$result['faker']->phoneNumber}} <br>  
      					@endif
 				@endfor
 		@endif

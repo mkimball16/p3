@@ -39,11 +39,13 @@ Route::post('/user', function() {
         elseif ($key == "profile") 
             $isProfileRequired = true;
         elseif ($key == "email")
-                $isEmailRequired = true;
+            $isEmailRequired = true;
+        elseif ($key == "phoneNumber")
+            $isPhoneNumberRequired = true;
     }
 
     $faker = Faker\Factory::create();
-    $result = array('numberOfUsers'=>$numberOfUsers, 'isBdayRequired'=>$isBdayRequired, 'isProfileRequired'=>$isProfileRequired, 'isEmailRequired'=>$isEmailRequired,'faker'=>$faker);
+    $result = array('numberOfUsers'=>$numberOfUsers, 'isBdayRequired'=>$isBdayRequired, 'isProfileRequired'=>$isProfileRequired, 'isEmailRequired'=>$isEmailRequired, 'isPhoneNumberRequired'=>$isPhoneNumberRequired, 'faker'=>$faker);
     return View::make('user')->with('result', $result);
 });
 
