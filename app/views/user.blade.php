@@ -21,9 +21,9 @@ Click the "Home" button to return to the homepage.</p>
 
 
 			@if(isset($result))			
-				<input maxlength="2" name="users" type="text" value={{$result['numberOfUsers']}} id="users"> (Maximum: 99)
+				<input maxlength="2" name="users" type="text" value={{$result['numberOfUsers']}} id="users"> <br />(Maximum: 99)
 			@else
-				<input maxlength="2" name="users" type="text" value="0" id="users"> (Maximum: 99)
+				<input maxlength="2" name="users" type="text" value="0" id="users"> <br />(Maximum: 99)
 
 			@endif	
 

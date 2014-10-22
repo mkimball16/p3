@@ -19,9 +19,11 @@ Click the "Home" button to return to the homepage.</p>
 		<form class="text" method='POST'>	
 			<label for="paragraphs">Paragraphs</label>
 				@if(isset($result))			
-					<input maxlength="2" name="numParagraphs" type="text" value={{$result['numberOfParagraphs']}} id="paragraphs"> (Maximum: 99)
+					<input maxlength="2" name="numParagraphs" type="text" 
+					value={{$result['numberOfParagraphs']}} id="paragraphs"> <br />(Maximum: 99)
 				@else
-					<input maxlength="2" name="numParagraphs" type="text" value="0" id="paragraphs"> (Maximum: 99)
+					<input maxlength="2" name="numParagraphs" type="text" 
+					value="0" id="paragraphs"> <br />(Maximum: 99)
 
 				@endif	
 
