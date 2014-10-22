@@ -70,13 +70,13 @@ h1, h2, h3 {
 
 .genie {
 	float: right;
-	margin-right: 15%;
+	margin-right: 10%;
 }
 
 
 .users, .text {
 	text-align: left;
-	margin-left: 15%;
+	margin-left: 10%;
 }
 
 
