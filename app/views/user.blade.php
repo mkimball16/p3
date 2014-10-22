@@ -6,7 +6,7 @@
 
 @section('content')
 
-<p class="tip">User the field below to specify how many random users to generate. You may also use the 
+<p class="tip">Use the field below to specify how many random users to generate. You may also use the 
 check boxes to inclue birthday, profile text, email, and phone number with each user in your results. 
 Click the "Home" button to return to the homepage.</p>
 

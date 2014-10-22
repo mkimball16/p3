@@ -7,7 +7,7 @@ Generate Lorem Ipsum Text
 
 @section('content')
 
-<p class="tip">User the field below to specify how many paragraphs of lorem ipsum text to generate. 
+<p class="tip">Use the field below to specify how many paragraphs of lorem ipsum text to generate. 
 Click the "Home" button to return to the homepage.</p>
 
 
