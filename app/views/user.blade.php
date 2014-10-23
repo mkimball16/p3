@@ -42,7 +42,7 @@ Click the "Submit" button and your wish will be granted! Click the "Home" button
 				@else
 					<input name="profile" type="checkbox">
 				@endif
-				<label for="profile">Profile</label>		<br>
+				<label for="profile">Profile Text</label>		<br>
 				@if($result['isEmailRequired'])
 					<input name="email" type="checkbox" checked="checked">
 				@else
@@ -59,7 +59,7 @@ Click the "Submit" button and your wish will be granted! Click the "Home" button
 				<input name="birthdate" type="checkbox">
 				<label for="birthdate">Birthdate</label>		<br>
 				<input name="profile" type="checkbox">
-				<label for="profile">Profile</label>		<br>
+				<label for="profile">Profile Text</label>		<br>
 				<input name="email" type="checkbox">
 				<label for="email">Email</label>		<br>
 				<input name="phoneNumber" type="checkbox">
