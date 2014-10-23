@@ -1,14 +1,14 @@
 @extends('_master')
 
 @section('title')
-	Generate Radom Users
+	Generate Random Users
 @stop
 
 @section('content')
 
 <p class="tip">Use the field below to specify how many random users to generate. You may also use the 
 check boxes to inclue birthday, profile text, email, and phone number with each user in your results. 
-Click the "Home" button to return to the homepage.</p>
+Click the "Submit" button and your wish will be granted! Click the "Home" button to return to the homepage.</p>
 
 	<form method="back" action="/">
     <button class="back">Home</button>
@@ -17,7 +17,7 @@ Click the "Home" button to return to the homepage.</p>
 <div class="container">
 <img class="genie" src='/images/genie.png' alt='genie'>
 	<form class="users" method='POST'>	
-			<label for="users">How many users?</label>		
+			<label for="users">How many users would you like?</label>	<br />	
 
 
 			@if(isset($result))			
@@ -69,10 +69,10 @@ Click the "Home" button to return to the homepage.</p>
     	</form>
 
 	</div>
- 
+ <h2>Your wish is my command!</h2>
  <h3>Random User Results:</h3>
 
-	<div class="resultscontainer"> 
+	<div class="user-results"> 
 
 		@if(isset($result))
 				@for ($i = 1; $i <= $result['numberOfUsers']; $i++)

@@ -7,26 +7,26 @@ Route::get('/', function()
     return View::make('index');
 });
 
+// Display page with lorem ipsum generator form
 Route::get('/text', function() {
    return View::make('text');   
 });
 
+// Display page with lorem ipsum paragraph results
 Route::post('/text', function() {
     $numberOfParagraphs = Input::get('numParagraphs');
     $Generator = new Badcow\LoremIpsum\Generator();
-    $paragraphsStr = $Generator->getParagraphs($numberOfParagraphs);
-    $result = array('numberOfParagraphs'=>$numberOfParagraphs, 'paragraphsStr'=>$paragraphsStr);
+    $paragraphs = $Generator->getParagraphs($numberOfParagraphs);
+    $result = array('numberOfParagraphs'=>$numberOfParagraphs, 'paragraphs'=>$paragraphs);
     return View::make('text')->with('result', $result);
 });
 
-
-
-
-
+// Display page with random user generator form
 Route::get('/user', function() {
    return View::make('user');   
 });
 
+// Display page with random user results
 Route::post('/user', function() {   
     $inputs = Input::all();
     $numberOfUsers = Input::get('users');
@@ -46,61 +46,13 @@ Route::post('/user', function() {
     }
 
     $faker = Faker\Factory::create();
-    $result = array('numberOfUsers'=>$numberOfUsers, 'isBdayRequired'=>$isBdayRequired, 'isProfileRequired'=>$isProfileRequired, 'isEmailRequired'=>$isEmailRequired, 'isPhoneNumberRequired'=>$isPhoneNumberRequired, 'faker'=>$faker);
+    $result = array('numberOfUsers'=>$numberOfUsers, 'isBdayRequired'=>$isBdayRequired, 
+        'isProfileRequired'=>$isProfileRequired, 'isEmailRequired'=>$isEmailRequired, 
+        'isPhoneNumberRequired'=>$isPhoneNumberRequired, 'faker'=>$faker);
     return View::make('user')->with('result', $result);
 });
 
 
-/*Route::get('/', function() {
-	
-    return View::make('index');
-
-    $query = Input::get('query');
-
-});
-
-
-
-
-// Display page to generate random users
-Route::get('/user/{users?}', function($users = 1)
-{
-    require_once (base_path().'/vendor/fzaninotto/faker/src/autoload.php');
-    $faker = Faker\Factory::create();
-    $names = isset($_GET['name']) ? $_GET['name'] : '';
-    for ($i = 0; $i < $users; $i++){
-         $names[$i] = $faker->name;
-    }
-
-    $data['names'] = $names;
-    return View::make('user', $data);
-
-        
-});
-
-Route::post('/user/{users?}', function($users = 1)
-{
-    require_once (base_path().'/vendor/fzaninotto/faker/src/autoload.php');
-    $faker = Faker\Factory::create();
-    $names = isset($_GET['name']) ? $_GET['name'] : '';
-    for ($i = 0; $i < $users; $i++){
-         $names[$i] = $faker->name;
-    }
-
-    $data['names'] = $names;
-    return View::make('user', $data);
-
-   }); 
-
-        
-
-// Display page to generate random lorem ipsum text
-Route::get('/text/{paragraphs?}', function($paragraphs = 0)
-{
-    $generator = new Badcow\LoremIpsum\Generator();
-    $data['paragraphs'] = $generator->getParagraphs($paragraphs);
-    return View::make('text', $data);
-});
 
 
 
