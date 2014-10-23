@@ -18,7 +18,12 @@ Route::post('/text', function() {
     $Generator = new Badcow\LoremIpsum\Generator();
     $paragraphs = $Generator->getParagraphs($numberOfParagraphs);
     $result = array('numberOfParagraphs'=>$numberOfParagraphs, 'paragraphs'=>$paragraphs);
+    if (is_numeric($numberOfParagraphs)) {
     return View::make('text')->with('result', $result);
+    }
+    else {
+        return View::make('error');
+    }
 });
 
 // Display page with random user generator form
@@ -49,7 +54,12 @@ Route::post('/user', function() {
     $result = array('numberOfUsers'=>$numberOfUsers, 'isBdayRequired'=>$isBdayRequired, 
         'isProfileRequired'=>$isProfileRequired, 'isEmailRequired'=>$isEmailRequired, 
         'isPhoneNumberRequired'=>$isPhoneNumberRequired, 'faker'=>$faker);
+    if (is_numeric($numberOfUsers)) {
     return View::make('user')->with('result', $result);
+    }
+    else {
+        return View::make('error');
+    }
 });
 
 
